@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="lab7">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 7</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="lab7.js"></script>
+</head>
+<body>
+	<div ng-controller="ControllerOne">
+		<input type="text" ng-model="a">
+		<input type="text" ng-model="b">
+		<button ng-click="concatenar()">Concatenar</button>
+		<div>
+			<h2>{{ result }}</h2>
+			<h2>{{ (a | number) + (b | number) }}</h2>
+		</div>
+	</div>
+	<div ng-controller="ControllerTwo">
+		<input type="number" ng-model="a">
+		<input type="number" ng-model="b">
+		<button ng-click="multiplicar()">Multiplicar</button>
+		<button ng-click="dividir()">Dividir</button>
+		<div>
+			<h2>{{ operation }} {{ result }}</h2>
+		</div>
+	</div>
+	
+</body>
+</html>
