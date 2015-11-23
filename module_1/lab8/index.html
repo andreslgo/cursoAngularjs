@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="lab8">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 8</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="lab8.js"></script>
+	<style>
+		.container{
+			float: left;
+			width: 50%;
+		}
+		.circle{
+			border: 1px solid lightblue;
+			background-color: orange;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="controller_one" class="container">
+		<h1 ng-show="showme">Hola Hola</h1>
+		<button ng-click="showHide()">Mostrar/Ocultar</button>
+	</div>
+	<div ng-controller="controller_two" class="container">
+		<div ng-mouseleave="mouseLeave()" ng-mouseenter="mouseEnter()" class="circle">
+			
+		</div>
+		<h1>{{ event_active }}</h1>
+	</div>
+	
+</body>
+</html>

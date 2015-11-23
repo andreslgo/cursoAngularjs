@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 11</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body>
+	<table border="0">
+		<tr>
+			<td><input type="checkbox" ng-model="enableDisableButton"> Deshabilitar Boton</td>
+			<td><button ng-disabled="enableDisableButton">Click</button></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" ng-model="showHide"> Mostrar Boton</td>
+			<td><button ng-show="showHide">Click</button></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" ng-model="show_hide"> Ocultar Boton</td>
+			<td><button ng-hide="show_hide">Click</button></td>
+		</tr>
+		<tr>
+			<td><p>Contador de Clicks: {{ click_counter }}</p></td>
+			<td><button ng-click="click_counter = click_counter + 1"> Click + 1</button></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 12</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="lab12.js"></script>
+</head>
+<body>
+	<h2>Formulario Angular JS</h2>
+	<div ng-controller="studentController">
+		<form name="studentForm" novalidate>
+			<table border="0">
+				<tr>
+					<td>Nombre</td>
+					<td>
+						<input type="text" name="firstName" ng-model="firstName" required>
+						<span class="spanError" ng-show="studentForm.firstName.$dirty && studentForm.firstName.$invalid">
+							<span class="spanError" ng-show="studentForm.firstName.$error.required">
+								El Nombre es requerido
+							</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Apellido</td>
+					<td>
+						<input type="text" name="lastName" ng-model="lastName" required>
+						<span class="spanError" ng-show="studentForm.lastName.$dirty && studentForm.lastName.$invalid">
+							<span class="spanError" ng-show="studentForm.lastName.$error.required">
+								El Apellido es requerido
+							</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>E-Mail</td>
+					<td>
+						<input type="email" name="email" ng-model="email" required>
+						<span class="spanError" ng-show="studentForm.email.$dirty && studentForm.email.$invalid">
+							<span class="spanError" ng-show="studentForm.email.$error.required">
+								El E-mail es requerido
+							</span>
+							<span class="spanError" ng-show="studentForm.email.$error.email">
+								El E-mail es invalido!
+							</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>Edad</td>
+					<td>
+						<input type="number" name="age" ng-model="age" required>
+						<span class="spanError" ng-show="studentForm.age.$dirty && studentForm.age.$invalid">
+							<span class="spanError" ng-show="studentForm.age.$error.required">
+								La edad es requerida
+							</span>
+							<span class="spanError" ng-show="studentForm.age.$error.number">
+								La edad es invalida!
+							</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td><button ng-click="reset()">Limpiar</button></td>
+					<td><button ng-click="submit()" ng-disabled="
+					studentForm.firstName.$dirty && studentForm.firstName.$invalid ||
+			  		studentForm.lastName.$dirty && studentForm.lastName.$invalid ||
+			  		studentForm.email.$dirty && studentForm.email.$invalid">
+						Enviar
+			  		</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

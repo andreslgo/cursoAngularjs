@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="calcApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 17</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers/controllerone.js"></script>
+	<script src="js/controllers/controllertwo.js"></script>
+	<script src="js/controllers/controllerthree.js"></script>
+	<script src="js/controllers/controllerfour.js"></script>
+</head>
+<body>
+	<div ng-include=" 'includes/header.html' "></div>
+	<div ng-include=" 'includes/menu.html' "></div>
+	<div ng-view></div>
+</body>
+</html>

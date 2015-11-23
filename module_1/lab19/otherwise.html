@@ -1,0 +1,51 @@
+<form>
+	<input type="hidden" name="id" ng-model="new_contact.id">
+	<div class="col-4">
+		<label for="name">Nombre</label>
+		<div class="form-control">
+			<input type="text" name="name" ng-model="new_contact.name">
+		</div>
+	</div>
+	<div class="col-4">
+		<label for="email">E-mail</label>
+		<div class="form-control">
+			<input type="text" name="email" ng-model="new_contact.email">
+		</div>
+	</div>
+	<div class="col-4">
+		<label for="mobile">Móvil</label>
+		<div class="form-control">
+			<input type="text" name="mobile" ng-model="new_contact.mobile">
+		</div>
+	</div>
+	<div class="col-4">
+		<div class="form-control">
+			<button ng-click="saveContactPerson()">Guardar</button>
+		</div>
+	</div>
+</form>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>Móvil</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contact in people">
+				<td>{{ contact.id }}</td>
+				<td>{{ contact.name }}</td>
+				<td>{{ contact.email }}</td>
+				<td>{{ contact.mobile }}</td>
+				<td>
+					<a href="" ng-click="edit(contact.id)">Editar</a>
+					<a href="" ng-click="delete(contact.id)">Eliminar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,18 @@
+<div>
+	<table ng-class="classTable">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Roll No.</th>
+				<th>Porcentaje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="person in persons">
+				<td>{{ person.Name }}</td>
+				<td>{{ person.RollNo }}</td>
+				<td>{{ person.Percentage }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
